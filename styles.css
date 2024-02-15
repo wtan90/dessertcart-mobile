@@ -1,104 +1,101 @@
-/* Base reset and box sizing */
 *, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Color scheme and base font size */
 :root {
-  --dark-grey: #1b1b32;
-  --light-grey: #f5f6f7;
-  --black: #000;
-  --white: #fff;
-  --grey: #3b3b4f;
-  --golden-yellow: #fecc4c;
-  --yellow: #ffcc4c;
-  --gold: #feac32;
-  --orange: #ffac33;
-  --dark-orange: #f89808;
-  font-size: 16px; /* Base font size */
+    --dark-grey: #1b1b32;
+    --light-grey: #f5f6f7;
+    --black: #000;
+    --white: #fff;
+    --grey: #3b3b4f;
+    --golden-yellow: #fecc4c;
+    --yellow: #ffcc4c;
+    --gold: #feac32;
+    --orange: #ffac33;
+    --dark-orange: #f89808;
 }
 
 body {
-  background-color: var(--dark-grey);
-  color: var(--white);
-  font-family: 'Arial', sans-serif;
+    background-color: var(--dark-grey);
+    color: var(--white);
+    font-family: Arial, sans-serif;
 }
 
 .title {
-  color: var(--light-grey);
-  text-align: center;
-  margin: 1.5rem 0;
+    color: var(--light-grey);
+    text-align: center;
+    margin: 1.5rem 0;
 }
 
 #dessert-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
 }
 
 .dessert-card {
-  background-color: var(--light-grey);
-  color: var(--dark-grey);
-  padding: 1rem;
-  text-align: center;
-  border-radius: 15px;
-  margin: 1rem;
-  flex: 0 1 calc(50% - 2rem); /* Adjusts size dynamically, with margin considered */
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 15px;
+    margin: 1rem;
+    flex: 0 1 calc(50% - 2rem);
 }
 
 .dessert-price, .product-category {
-  font-size: 1rem; /* Responsive font size */
+    font-size: 1rem;
 }
 
 .btn {
-  display: inline-block; /* To allow buttons to sit side by side */
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  color: var(--dark-grey);
-  background-color: var(--gold);
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    color: var(--dark-grey);
+    background-color: var(--gold);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-image: linear-gradient(var(--yellow), var(--dark-orange));
+    background-image: linear-gradient(var(--yellow), var(--dark-orange));
 }
 
-/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
-  .dessert-card {
-    flex: 0 1 calc(100% - 2rem); /* Full width on smaller screens */
-  }
-  
-  :root {
-    font-size: 14px; /* Smaller base font size for smaller devices */
-  }
+    .dessert-card {
+        flex: 0 1 calc(100% - 2rem);
+    }
+    
+    :root {
+        font-size: 14px;
+    }
 }
 
-/* Cart button and container adjustments for mobile */
 #cart-btn {
-  position: fixed; /* Ensures visibility on scroll */
-  bottom: 20px; /* Moves button to a more thumb-friendly position on mobile */
-  right: 20px;
-  z-index: 10; /* Ensures it's above other content */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
 }
 
 #cart-container {
-  display: none; /* Starts hidden */
-  position: fixed; /* Fixed positioning for easier access on mobile */
-  bottom: 70px; /* Adjusted to not overlap the cart button */
-  right: 10px;
-  width: 90%; /* Responsive width */
-  max-width: 300px; /* Limits max width for larger screens */
-  overflow-y: auto; /* Ensures content is scrollable */
-  background-color: var(--light-grey);
-  border: 3px solid var(--white); /* Adjusts for better visibility */
-  border-radius: 15px;
-  text-align: center;
-  font-size: 1.2rem;
-  padding: 1rem;
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    width: 90%;
+    max-width: 300px;
+    overflow-y: auto;
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    border: 3px solid var(--white);
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+    z-index: 1000;
 }
