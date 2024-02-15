@@ -124,6 +124,7 @@ cartBtn.addEventListener("click", () => {
   isCartShowing = !isCartShowing;
   showHideCartSpan.textContent = isCartShowing ? "Hide" : "Show";
   cartContainer.style.display = isCartShowing ? "block" : "none";
+  cartBtn.setAttribute('aria-expanded', isCartShowing); // Improve accessibility
 });
 
 clearCartBtn.addEventListener("click", () => cart.clearCart());
